@@ -38,6 +38,7 @@ renderer.setClearColor(0x000000, 0.0);
 
 // orbit control setup
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false;
 
 // earth geometry
 const earthGeometry = new THREE.SphereGeometry(0.6, 32, 32);
