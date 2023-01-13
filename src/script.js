@@ -43,8 +43,8 @@ const earthGeometry = new THREE.SphereGeometry(0.6, 32, 32);
 const earthMaterial = new THREE.MeshPhongMaterial({
   roughness: 1,
   metalness: 0,
-  map: new THREE.TextureLoader().load("texture/Blue_wireframe_earth_V5.jpg"),
-  bumpMap: new THREE.TextureLoader().load("texture/earthbump.jpg"),
+  map: new THREE.TextureLoader().load("https://www.postredinteractive.com/wp-content/uploads/2023/01/Blue_wireframe_earth_V5.jpg"),
+  bumpMap: new THREE.TextureLoader().load("https://www.postredinteractive.com/wp-content/uploads/2023/01/earthbump.jpg"),
   bumpScale: 0.1,
 });
 
@@ -70,7 +70,7 @@ const starGeometry = new THREE.SphereGeometry(80, 64, 64);
 
 // galaxy material
 const starMaterial = new THREE.MeshBasicMaterial({
-  map: new THREE.TextureLoader().load("texture/galaxy.png"),
+  map: new THREE.TextureLoader().load("https://www.postredinteractive.com/wp-content/uploads/2023/01/galaxy.png"),
   side: THREE.BackSide,
 });
 
