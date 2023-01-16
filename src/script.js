@@ -4,6 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import Blue_wireframe_earth_V5 from "../public/Blue_wireframe_earth_V5.jpg";
 import earthbump from "../public/earthbump.jpg";
 import galaxy from "../public/galaxy.png";
+import earthCloud from "../public/earthCloud_BLUE_v3.png";
 
 // import Stats from "three/examples/jsm/libs/stats.module.js";
 
@@ -38,6 +39,7 @@ renderer.setClearColor(0x000000, 0.0);
 
 // orbit control setup
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false;
 
 // earth geometry
 const earthGeometry = new THREE.SphereGeometry(0.6, 32, 32);
@@ -56,11 +58,11 @@ const earthMesh = new THREE.Mesh(earthGeometry, earthMaterial);
 scene.add(earthMesh);
 
 // cloud Geometry
-const cloudGeometry = new THREE.SphereGeometry(0.63, 32, 32);
+const cloudGeometry = new THREE.SphereGeometry(0.67, 32, 32);
 
 // cloud metarial
 const cloudMetarial = new THREE.MeshPhongMaterial({
-  map: new THREE.TextureLoader().load(""),
+  map: new THREE.TextureLoader().load(earthCloud),
   transparent: true,
 });
 
