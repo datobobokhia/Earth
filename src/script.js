@@ -31,6 +31,7 @@ scene.add(camera);
 renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   antialias: true,
+  alpha: true,
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
@@ -70,18 +71,18 @@ const cloudMetarial = new THREE.MeshPhongMaterial({
 const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMetarial);
 scene.add(cloudMesh);
 
-// galaxy geometry
-const starGeometry = new THREE.SphereGeometry(80, 64, 64);
+// // galaxy geometry
+// const starGeometry = new THREE.SphereGeometry(80, 64, 64);
 
-// galaxy material
-const starMaterial = new THREE.MeshBasicMaterial({
-  map: new THREE.TextureLoader().load(galaxy),
-  side: THREE.BackSide,
-});
+// // galaxy material
+// const starMaterial = new THREE.MeshBasicMaterial({
+//   map: new THREE.TextureLoader().load(galaxy),
+//   side: THREE.BackSide,
+// });
 
-// galaxy mesh
-const starMesh = new THREE.Mesh(starGeometry, starMaterial);
-scene.add(starMesh);
+// // galaxy mesh
+// const starMesh = new THREE.Mesh(starGeometry, starMaterial);
+// scene.add(starMesh);
 
 // ambient light
 const ambientlight = new THREE.AmbientLight(0xffffff, 1);
@@ -115,7 +116,7 @@ window.addEventListener(
 // spinning animation
 const animate = () => {
   requestAnimationFrame(animate);
-  starMesh.rotation.y -= 0.002;
+//   starMesh.rotation.y -= 0.002;
   earthMesh.rotation.y -= 0.0015;
   cloudMesh.rotation.y -= 0.001;
   controls.update();
