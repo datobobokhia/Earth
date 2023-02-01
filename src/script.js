@@ -116,7 +116,7 @@ window.addEventListener(
 // spinning animation
 const animate = () => {
   requestAnimationFrame(animate);
-//   starMesh.rotation.y -= 0.002;
+  starMesh.rotation.y -= 0.002;
   earthMesh.rotation.y -= 0.0015;
   cloudMesh.rotation.y -= 0.001;
   controls.update();
