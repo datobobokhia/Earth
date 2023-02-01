@@ -121,7 +121,7 @@ const animate = () => {
   cloudMesh.rotation.y -= 0.001;
   controls.update();
   render();
-  //   stats.update();
+  stats.update();
 };
 
 // rendering
